@@ -1,6 +1,9 @@
 # Dockerfile
 FROM python:3.11-slim
 
+# At the very top, right after FROM
+ARG FORCE_REBUILD=2025-10-02-1
+
 # OS deps for Lean + tooling to extract .zst/.xz archives
 RUN apt-get update && apt-get install -y --no-install-recommends \
     curl git ca-certificates build-essential libgmp-dev bash zstd xz-utils \
