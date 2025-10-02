@@ -1,1 +1,1 @@
-#check 2+2
+def hello := "world"
